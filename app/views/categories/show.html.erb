@@ -20,7 +20,7 @@
       <tr data-link="<%= product.url %>"  onclick="window.open($(this).data('link'),'_blank')">
         <td><%= index+1 %></td>
         <td><%= product.name %></td>
-        <td><img src="<%= product.image %>" title="<%= product.name %>" alt="<%= product.name %>" class="hidden-xs"></td>
+        <td class="hidden-xs"><img src="<%= product.image %>" title="<%= product.name %>" alt="<%= product.name %>" ></td>
         <td><%= product.price %></td>
       </tr>
   <% end %>
