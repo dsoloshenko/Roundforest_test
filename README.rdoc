@@ -9,8 +9,5 @@ Things you may want to cover:
 
 * Rails version - 4.2.5.1
 
-* We can import categories and products by rake roundforest_store:import_products command
+* We can import categories and products by <tt>rake roundforest_store:import_products</tt> command
 
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
