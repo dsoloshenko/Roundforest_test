@@ -24,6 +24,7 @@ class ImportProductsService
 
   def create_categories
     @categories.each do |catalog_name|
+      # Create category if it does not exist
      Category.create(name: catalog_name) if Category.find_by_name(catalog_name).blank?
     end
   end
@@ -34,13 +35,14 @@ class ImportProductsService
        category = Category.where('lower(name) = ?', product["category"].downcase).first
        # Check if category exists in Categories collection if no (in case of grammatical and other errors) save this case to the file
       if category.present?
+        # Create product if it does not exist
         category.products.create(
                          name: product["name"],
                          image: product["image"],
                          score: product["score"],
                          price: product["price"],
                          url: product["url"]
-        )
+        ) unless category.products.find_by_name(product["name"]).present?
       else
         File.open('vendor/products/errors.txt', 'a+') { |file| file.write("||  Not found category: product name: #{product["name"]}, product  category:  #{product["category"]}") }
       end
