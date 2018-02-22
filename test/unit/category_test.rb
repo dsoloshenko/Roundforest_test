@@ -11,6 +11,6 @@ class CategoryTest < ActiveSupport::TestCase
   test "category is not valid without a unique name" do
     category = Category.new(:name => categories(:category).name)
     assert !category.save
-    assert_equal "has already been taken", category.errors[:title].join('; ')
+    assert_equal "has already been taken", category.errors[:name].join('; ')
   end
 end
