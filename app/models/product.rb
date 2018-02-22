@@ -6,7 +6,7 @@ class Product < ActiveRecord::Base
 
   validates :name, :presence => true
   validates :price, :numericality => {:greater_than_or_equal_to => 0.01}
-  validates :image, format: {with: /\.(png|jpg)\Z/i}
+  validates :image, format: {with: /\.(png|jpg|gif)\Z/i}
 
   default_scope { order(:score) }
 
