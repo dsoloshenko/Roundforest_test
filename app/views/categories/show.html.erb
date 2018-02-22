@@ -1,13 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
-
 <%= link_to 'Back', categories_path %>
 
-<h1>Listing Products</h1>
+<h1><%= @category.name %> products</h1>
 
 <table class="table table-bordered table-hover">
   <thead>

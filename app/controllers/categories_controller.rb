@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
   def index
-    @categories = Category.all.map {|c| CategoryDecorator.decorate(c) }
+    @categories = Category.active.map {|c| CategoryDecorator.decorate(c) }
   end
 
   # GET /categories/1

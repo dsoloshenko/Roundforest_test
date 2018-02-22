@@ -1,9 +1,9 @@
 class Category < ActiveRecord::Base
   has_many :products
 
-  default_scope { order(:name) }
+  scope :active, -> {(includes(:products).where.not(:products => { :id => nil })).order('lower("categories"."name")')}
 
   validates :name, :presence => true
-  validates :name, :uniqueness => true
+  validates :name, :uniqueness => {:case_sensitive => false}
 
 end
