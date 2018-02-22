@@ -30,7 +30,7 @@ class ImportProductsService
 
   def create_products
     @products.each do |product|
-      # In case of case discrepancies in categories we transform it to lowercase 
+      # In case of case discrepancies in categories we transform it to lowercase
        category = Category.where('lower(name) = ?', product["category"].downcase).first
        # Check if category exists in Categories collection if no (in case of grammatical and other errors) save this case to the file
       if category.present?

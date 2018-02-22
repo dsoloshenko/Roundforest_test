@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RoundforestStore</title>
+  <title>RoundforestTest</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><%= yield %></div>
+  </div>
+</div>
 
-<%= yield %>
 
 </body>
 </html>

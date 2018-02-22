@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Categories</h1>
+
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th class="hidden-xs">Image</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr data-link="<%= category_path(category.id) %>"  onclick="window.location.replace($(this).data('link'))">
+        <td class="hidden-xs"><img src="<%= category.category_image %>" title="<%= category.name %>" alt="<%= category.name %>"></td>
+        <td><%= category.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
