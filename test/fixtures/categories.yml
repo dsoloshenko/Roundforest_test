@@ -1,2 +1,18 @@
 category:
+  id: 1
   name: "Calculator"
+category1:
+  id: 2
+  name: "Toys"
+category2:
+  id: 3
+  name: "books"
+category3:
+  id: 4
+  name: "games"
+category4:
+  id: 5
+  name: "glasses"
+category5:
+  id: 6
+  name: "Area Rugs"

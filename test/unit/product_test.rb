@@ -39,4 +39,9 @@ class ProductTest < ActiveSupport::TestCase
       assert new_product(name).invalid?, "#{name} shouldn't be valid"
     end
   end
+
+  test "product default scope sorted by score" do
+    assert_equal Product.all.pluck(:score), Product.all.pluck(:score).sort
+  end
+
 end

@@ -1,0 +1,43 @@
+product:
+  id: 1
+  name: "bear"
+  price: 45
+  image: "test.png"
+  category_id: 1
+  score: 33
+product1:
+  id: 2
+  name: "sun"
+  price: 75
+  image: "test.png"
+  category_id: 4
+  score: 22
+product2:
+  id: 3
+  name: "cover"
+  price: 15
+  image: "test.png"
+  category_id: 2
+  score: 10
+product3:
+  id: 4
+  name: "game"
+  price: 95
+  image: "test.png"
+  category_id: 3
+  score: 3
+product4:
+  id: 5
+  name: "glasses"
+  price: 95
+  image: "test.png"
+  category_id: 5
+  score: 3
+product5:
+  id: 6
+  name: "toy"
+  price: 95
+  image: "test.png"
+  category_id: 6
+  score: 3
+
