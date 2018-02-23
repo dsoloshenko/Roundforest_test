@@ -5,9 +5,11 @@ application up and running.
 
 Things you may want to cover:
 
+Project link on Heroku: https://roundforest-test.herokuapp.com
+
 * Ruby version  - 2.2.1
 
 * Rails version - 4.2.5.1
 
 * We can import categories and products by <tt>rake roundforest_store:import_products</tt> command
-
+* Run unit test <tt>rake test</tt> command
